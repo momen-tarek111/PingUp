@@ -1,12 +1,17 @@
 import { Outlet } from "react-router-dom"
 import Sidebar from "../components/Sidebar"
 import { Menu, X } from "lucide-react"
-import {  useState } from "react"
+import { useEffect, useState } from "react"
 import Loading from "../components/Loading"
 import { useSelector } from "react-redux"
+import { useClerk } from "@clerk/react"
 function Layout() {
     const user=useSelector((state)=>state.user.value)
     const [sidebarOpen, setSidebarOpen] = useState(false)
+    const {signOut}=useClerk()
+    useEffect(()=>{
+      signOut()
+    },[])
     return user?(
       <div className='w-full flex h-screen'>
         <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/>
