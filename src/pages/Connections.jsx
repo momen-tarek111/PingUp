@@ -108,7 +108,7 @@ function Connections() {
                   }
                   {
                     currentTab === 'Pending' && (
-                      <button onClick={()=>acceptConnection(user._id)} className='w-full p-2 text-sm rounded bg-green-500 hover:bg-green-600 text-black active:scale-95 transition cursor-pointer'>
+                      <button onClick={()=>acceptConnection(user._id)} className='w-full p-2 text-sm rounded bg-green-500 hover:bg-green-600 text-white active:scale-95 transition cursor-pointer'>
                         Accept
                       </button>
                     )
