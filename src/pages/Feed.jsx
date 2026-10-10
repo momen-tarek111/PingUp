@@ -19,6 +19,7 @@ function Feed() {
         Authorization:`Bearer ${await getToken()}`
       }})
       if(data.success){
+        console.log(data.posts)
         setFeeds(data.posts)
       }else{
         toast.error(data.message)
