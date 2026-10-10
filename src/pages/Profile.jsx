@@ -17,10 +17,10 @@ function Profile() {
   const [posts, setPosts] = useState([])
   const [activeTab, setActiveTab] = useState('posts')
   const [showEdit, setShowEdit] = useState(false)
-  const fetchUser=async()=>{
+  const fetchUser=async(id)=>{
     const token=await getToken()
     try {
-      const{data}=await api.post(`/api/user/profiles`,{profileId},{
+      const{data}=await api.post(`/api/user/profiles`,{profileId:id},{
         headers:{Authorization:`Bearer ${token}`}
       })
       if(data.success){

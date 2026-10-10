@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { X } from "lucide-react"
+import { Image, X } from "lucide-react"
 import toast from "react-hot-toast"
 import { useSelector } from "react-redux"
 import { useAuth } from "@clerk/react"
@@ -11,7 +11,7 @@ function CreatePost() {
   const [images, setImages] = useState([])
   const [loading, setLoading] = useState(false)
   const user=useSelector((state)=>state.user.value)
-  const getToken=useAuth()
+  const {getToken}=useAuth()
   const handleSubmit=async()=>{
     if(!images.length&&!content){
       return toast.error('please add at least one image or text')
@@ -30,6 +30,7 @@ function CreatePost() {
           Authorization:`Bearer ${await getToken()}`
         }
       })
+      console.log(data)
       if(data.success){
         navigate('/')
       }else{
@@ -38,7 +39,7 @@ function CreatePost() {
       }
     } catch (error) {
       console.log(error.message);
-      // throw new Error(error.message)
+      return new Error(error.message)
     }
     setLoading(false)
   }
@@ -61,7 +62,7 @@ function CreatePost() {
           </div>
 
           {/* Text Area */}
-          <textarea onClick={(e)=>setContent(e.target.value)} value={content} className='w-full resize-none max-h-20 mt-4 text-sm outline-none placeholder-gray-400' placeholder="What's happening?"/>
+          <textarea value={content} onChange={(e)=>setContent(e.target.value)} className='w-full resize-none max-h-20 mt-4 text-sm outline-none placeholder-gray-400' placeholder="What's happening?"/>
           {images.length > 0 && <div className='flex flex-wrap gap-2 mt-4'>
             {images.map((image, i)=>(
               <div key={i} className='relative group'>

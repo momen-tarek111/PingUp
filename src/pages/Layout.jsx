@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
 import Sidebar from "../components/Sidebar"
 import { Menu, X } from "lucide-react"
-import { useState } from "react"
+import {  useState } from "react"
 import Loading from "../components/Loading"
 import { useSelector } from "react-redux"
 function Layout() {

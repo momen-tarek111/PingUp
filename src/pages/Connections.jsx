@@ -8,7 +8,7 @@ import api from '../api/axios';
 import toast from 'react-hot-toast';
 function Connections() {
   const navigate = useNavigate()
-  const getToken=useAuth()
+  const {getToken}=useAuth()
   const dispatch=useDispatch()
   const {connections,pendingConnections,followers,following}=useSelector((state)=>state.connections)
   const [currentTab, setCurrentTab] = useState('Followers')

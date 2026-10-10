@@ -14,7 +14,7 @@ function RecentMessages() {
         try {
             const token = await getToken()
             const { data } = await api.get('/api/user/recent-messages', {
-            headers: { Authorization: `Bearer ${token}` }
+                headers: { Authorization: `Bearer ${token}` }
             })
             if(data.success){
             // Group messages by sender and get the latest message for each sender

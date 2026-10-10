@@ -14,7 +14,7 @@ function Discover() {
   const [input, setInput] = useState('')
   const [users, setUsers] = useState([])
   const [loading, setLoading] = useState(false)
-  const getToken=useAuth()
+  const {getToken}=useAuth()
   const handleSearch = async (e) => {
     if(e.key === 'Enter'){
       try {

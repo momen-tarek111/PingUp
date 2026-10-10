@@ -8,13 +8,13 @@ import { useAuth } from "@clerk/react"
 import api from "../api/axios"
 import toast from "react-hot-toast"
 function StoriesBar() {
-    const getToken=useAuth()
+    const {getToken}=useAuth()
     const [stories,setStories]=useState([])
     const [showModal, setShowModal] = useState(false)
     const [viewStory, setViewStory] = useState(null)
     const fetchStories=async()=>{
         try {
-            const token=getToken()
+            const token=await getToken()
             const {data}=await api.get("/api/story/get",{
                 headers:{
                     Authorization:`Bearer ${token}`
