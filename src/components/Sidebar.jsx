@@ -20,15 +20,15 @@ function Sidebar({sidebarOpen, setSidebarOpen}) {
           Create Post
         </Link>
       </div>
-      <div className='w-full border-t border-gray-200 p-4 px-7 flex items-center justify-between'>
-        <div className='flex gap-2 items-center cursor-pointer'>
-          <UserButton />
-          <div>
-            <h1 className='text-sm font-medium'>{user.full_name}</h1>
-            <p className='text-xm text-gray-500'>@{user.username}</p>
-          </div>
+      <div className='w-full border-t border-gray-200 p-4 px-4 flex items-center justify-between gap-2 overflow-hidden'>
+        <div className='flex gap-2 items-center cursor-pointer min-w-0'>
+            <UserButton />
+            <div className='min-w-0'>
+                <h1 className='text-sm font-medium truncate'>{user.full_name}</h1>
+                <p className='text-xs text-gray-500 truncate'>@{user.username}</p>
+            </div>
         </div>
-        <LogOut onClick={signOut} className='w-4.5 text-red-400 hover:text-red-700 transition cursor-pointer'/>
+        <LogOut onClick={signOut} className='w-5 h-5 text-red-400 hover:text-red-700 transition cursor-pointer shrink-0'/>
       </div>
     </div>
   )
