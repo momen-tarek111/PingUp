@@ -12,7 +12,7 @@ function StoryModal({setShowModal,fetchStories}) {
   const [media, setMedia] = useState(null)
   const [previewUrl, setPreviewUrl] = useState(null)
   const {getToken}=useAuth()
-  const MAX_VIDEO_DURATION=60;
+  const MAX_VIDEO_DURATION=65;
   const MAX_VIDEO_SIZE_MB=50;
   const handleMediaUpload = (e) => {
       const file = e.target.files?.[0]
