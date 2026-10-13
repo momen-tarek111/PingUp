@@ -11,7 +11,7 @@
 ![Clerk](https://img.shields.io/badge/Clerk-6C47FF?style=for-the-badge&logo=clerk&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-[🌐 Live Demo](https://ping-up-omega-five.vercel.app) • [🎬 Watch Video](YOUR_GOOGLE_DRIVE_VIDEO_LINK) • [⚙️ Backend Repo](https://github.com/momen-tarek111/PingUp_Server.git) • [🚀 Live API](https://ping-up-server-one-eta.vercel.app)
+[🌐 Live Demo](https://ping-up-omega-five.vercel.app) • [🎬 Watch Video](https://drive.google.com/file/d/148v4WUw6KSYpi-psPgUIgnhnkmSV12Ej/view?usp=sharing) • [⚙️ Backend Repo](https://github.com/momen-tarek111/PingUp_Server.git) • [🚀 Live API](https://ping-up-server-one-eta.vercel.app)
 
 </div>
 
@@ -19,7 +19,7 @@
 
 ## 🎬 Demo Video
 
-[![Watch the demo](https://img.shields.io/badge/▶_Watch_Full_Demo-Google_Drive-red?style=for-the-badge&logo=googledrive&logoColor=white)](YOUR_GOOGLE_DRIVE_VIDEO_LINK)
+[![Watch the demo](https://img.shields.io/badge/▶_Watch_Full_Demo-Google_Drive-red?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/148v4WUw6KSYpi-psPgUIgnhnkmSV12Ej/view?usp=sharing)
 
 ## 🔗 Live Links
 
@@ -86,7 +86,7 @@ client/
 
 ### Prerequisites
 - Node.js v20.19+ (required by Vite 8)
-- The [backend server](YOUR_BACKEND_REPO_LINK) running locally, or use the live API
+- The [backend server](https://github.com/momen-tarek111/PingUp_Server.git) running locally, or use the live API
 - A Clerk account
 
 ### Installation
